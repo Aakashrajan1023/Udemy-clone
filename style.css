@@ -217,7 +217,7 @@ body{
 
 @media screen and (max-width:800px){
     body{
-        font-size: 10px;
+        font-size: 8px;
     }
 }
 
@@ -229,6 +229,7 @@ body{
     .offer-box{
         top: 3%;
         left: 3%;
+        display: block;
     }
 
     .categories,.navbar__s2,.navbar__s3{
