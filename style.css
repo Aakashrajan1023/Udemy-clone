@@ -52,9 +52,13 @@ body{
     gap: 10px;
 }
 
+.navbar__s4{
+    display: none;
+}
+
 .mylearning{
    position: relative;
-   cursor: pointer;
+   cursor:pointer ;
 
 }
 
@@ -87,6 +91,15 @@ body{
     border-radius: 20px;
     padding: 10px;
     color: white;
+    border: solid 1px #A435F0;
+}
+
+.categories p:hover{
+    cursor: pointer;
+    transition: 2s;
+    background-color: transparent;
+    color: black;
+    border: solid 1px #A435F0;
 }
 
 .sale-image{
@@ -99,12 +112,29 @@ body{
 .offer-box{
     border: solid black 2px;
     background-color: white;
-    padding: 20px;
+    padding: 2%;
     display: inline-block;
     width: 30%;
     position: absolute;
-    top: 10%;
-    left: 10%;
+    top: 7%;
+    left: 7%;
+    opacity: 0;
+    animation-name: zoom;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+
+}
+
+@keyframes zoom {
+    0%{
+        opacity: 0;
+        transform: scale(0);
+    }
+    100%{
+        opacity: 1;
+        transform: scale(1);
+    }
+    
 }
 
 .recommended{
@@ -120,7 +150,9 @@ body{
 }
 
 .course-card{
-    width: 270px;
+    flex-grow: 1;
+    flex-basis: 20%;
+    margin: 5px;
 }
 
 .course-card img{
@@ -181,7 +213,33 @@ body{
 }
 
 
+/* Media queries */
 
+@media screen and (max-width:800px){
+    body{
+        font-size: 10px;
+    }
+}
+
+@media screen and (max-width:600px){
+    .course-card{
+        flex-basis: 40%;
+    }
+
+    .offer-box{
+        top: 4%;
+        left: 4%;
+    }
+
+    .categories,.navbar__s2,.navbar__s3{
+        display: none;
+    }
+
+    .navbar__s4{
+        display: block;
+    }
+
+}
 
 
 
